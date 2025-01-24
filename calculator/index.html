@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <script src="./js/numbers.js"></script>
+    <script src="./js/operations.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .calculator {
+            display: inline-grid;
+            grid-template-columns: repeat(4, 60px);
+            grid-gap: 5px;
+            justify-content: center;
+        }
+        input[type="text"] {
+            color: gold;
+            grid-column: span 4;
+            height: 40px;
+            font-size: 10px;
+            text-align: right;
+            padding: 5px;
+        }
+        .inputs-container {
+            margin-bottom: 10px;
+        }
+        .inputs-container input {
+            width: 100px;
+            height: 30px;
+            font-size: 16px;
+            margin: 5px;
+            text-align: center;
+            border-radius: 1%;
+        }
+        button {
+            color: rgb(17, 0, 255);
+            height: 50px;
+            font-size: 13px;
+            cursor: pointer;
+            border-radius: 20%;
+            border: 2px solid;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+
+    <div class="inputs-container">
+        <input type="text" id="display1" value="0" readonly>
+        <input type="text" id="display2" placeholder="">
+        <input type="text" id="operator" placeholder="">
+    </div>
+
+    <div class="calculator">
+        <button onclick="seven()">7</button>
+        <button onclick="eight()">8</button>
+        <button onclick="nine()">9</button>
+        <button onclick="sum()">+</button>
+
+        <button onclick="four()">4</button>
+        <button onclick="five()">5</button>
+        <button onclick="six()">6</button>
+        <button onclick="sub()">-</button>
+
+        <button onclick="one()">1</button>
+        <button onclick="two()">2</button>
+        <button onclick="three()">3</button>
+        <button onclick="mul()">*</button>
+
+        <button onclick="zero()">0</button>
+        <button onclick="dot()">.</button>
+        <button onclick="equals()">=</button>
+        <button onclick="div()">÷</button>
+    </div>
+</body>
+</html>
